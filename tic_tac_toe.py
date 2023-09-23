@@ -177,8 +177,7 @@ def find_max(board, depth, alpha,beta):
 def find_min(board, depth, alpha,beta):
     """
     Return the min value of the tree using recursion
-    """
-       
+    """ 
     if terminal(board) or depth == 0:
         return utility(board),None
     
@@ -218,7 +217,7 @@ while True:
     if winner(board) is not None:
         print("Player", winner(board), "wins !")
         break
-    
+
     if terminal(board):
         print("It is a tie !")
 
