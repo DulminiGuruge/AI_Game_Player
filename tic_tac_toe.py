@@ -80,10 +80,7 @@ def winner(board):
     """
     Returns the winner of the game, if there is one.
     """
-    """ for i in range(3):
-        if EMPTY in board[i]:
-            break
-        return "tie" """
+
     #check horizontally
     if board [0][0] == board[0][1] and board[0][1] == board[0][2] :
         if board[0][0] != EMPTY:
@@ -156,6 +153,9 @@ def utility(board):
 
 
 def find_max(board, depth, alpha,beta):
+    """
+    Return the max value of the tree using recursion
+    """
     
     
     if terminal(board) or depth == 0:
@@ -164,8 +164,7 @@ def find_max(board, depth, alpha,beta):
     maxVal = float('-inf')
     for action in actions(board):
            
-            value,act = find_min(result(board,action), depth-1, alpha, beta)
-           
+            value,act = find_min(result(board,action), depth-1, alpha, beta)         
             maxVal = max( maxVal, value) 
             alpha = max( alpha, maxVal)
             move = action
@@ -176,6 +175,9 @@ def find_max(board, depth, alpha,beta):
         
 
 def find_min(board, depth, alpha,beta):
+    """
+    Return the min value of the tree using recursion
+    """
        
     if terminal(board) or depth == 0:
         return utility(board),None
@@ -209,17 +211,16 @@ def minimax(board):
             return move
      
 
-# Main game loop
+# Main loop
 while True:
     print_board(board)
     
-   
-    
     if winner(board) is not None:
-        print("Player", winner(board), "wins!")
+        print("Player", winner(board), "wins !")
         break
+    
     if terminal(board):
-        print("It is a tie")
+        print("It is a tie !")
 
     
     if player(board)=='O':
@@ -232,7 +233,7 @@ while True:
                 board[move//3][move%3] = O
                 break
             else:
-                print("Invalid move! Try again.")
+                print("Invalid move! Please,Try again.")
     else:
         # Player X's turn
         move = minimax(board)
