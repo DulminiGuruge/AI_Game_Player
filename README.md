@@ -1,4 +1,4 @@
-#    ***  Tic Tac Toe Game with an AI player   ***
+###      Tic Tac Toe Game with an AI player   
 
 
 Used Alpha Beta Pruning to create the AI to play with the user. 
