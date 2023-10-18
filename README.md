@@ -1,7 +1,7 @@
-#    ***  Tic Tac Toe Game with an AI player   ***
+#    ***Implementing an AI Player with Alpha Beta Pruning***
 
 
-Used Alpha Beta Pruning to create the AI to play with the user. 
+Alpha Beta Pruning is a search algorithm used in game theory and decision trees, which efficiently explores game trees and eliminates branches that won't affect the final decision. This algorithm is particularly useful in games where there are two players, Maximizing Player who is trying to maximize their outcome and Minimizing Player is the other trying to minimize it. In this Tic Tac Toe game, the Maximizing Player is the AI and the algorithm alpha beta pruning is used maximize the chance of AI winning, while the Minimizing Player is the human opponent who is trying to minimize the AI's chances.
 
 The algorithm of Alpha Beta Pruning is given below.
 
